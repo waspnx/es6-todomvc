@@ -19,6 +19,7 @@
     "eslint-config-kentcdodds": "6.2.1",
     "eslint-loader": "1.3.0",
     "ghooks": "1.2.1",
+    "imports-loader": "0.6.5",
     "jasmine-core": "2.4.1",
     "karma": "0.13.22",
     "karma-chrome-launcher": "1.0.1",
