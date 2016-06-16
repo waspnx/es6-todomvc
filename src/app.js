@@ -1,26 +1,32 @@
 /* global app, $on, log */
-(function() {
-  'use strict'
+'use strict'
 
-  /**
-   * Sets up a brand new Todo list.
-   *
-   * @param {string} name The name of your new to do list.
-   */
-  function Todo(name) {
-    this.storage = new app.Store(name)
-    this.model = new app.Model(this.storage)
-    this.template = new app.Template()
-    this.view = new app.View(this.template)
-    this.controller = new app.Controller(this.model, this.view)
-  }
+require('todomvc-common')
+require('./view')
+require('./helpers')
+require('./controller')
+require('./model')
+require('./store')
+require('./template')
 
-  function onLoad() {
-    var todo = new Todo('todos-vanillajs')
-    todo.controller.setView(document.location.hash)
-    log('view set')
-  }
+/**
+* Sets up a brand new Todo list.
+*
+* @param {string} name The name of your new to do list.
+*/
+function Todo(name) {
+  this.storage = new app.Store(name)
+  this.model = new app.Model(this.storage)
+  this.template = new app.Template()
+  this.view = new app.View(this.template)
+  this.controller = new app.Controller(this.model, this.view)
+}
 
-  $on(window, 'load', onLoad)
-  $on(window, 'hashchange', onLoad)
-})()
+function onLoad() {
+  var todo = new Todo('todos-vanillajs')
+  todo.controller.setView(document.location.hash)
+  log('view set')
+}
+
+$on(window, 'load', onLoad)
+$on(window, 'hashchange', onLoad)
