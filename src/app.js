@@ -1,5 +1,7 @@
 /* global app, $on, log */
 
+require('todomvc-common/base.css')
+require('todomvc-app-css/index.css')
 require('todomvc-common')
 require('./view')
 require('./helpers')
