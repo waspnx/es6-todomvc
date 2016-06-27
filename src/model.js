@@ -1,5 +1,3 @@
-'use strict'
-
 /**
 * Creates a new Model instance and hooks up the storage.
 *

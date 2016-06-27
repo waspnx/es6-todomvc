@@ -1,6 +1,4 @@
 /* global app, $on */
-'use strict'
-
 require('todomvc-common')
 require('./view')
 require('./helpers')

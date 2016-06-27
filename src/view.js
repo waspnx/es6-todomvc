@@ -1,6 +1,5 @@
 /*global qs, qsa, $on, $parent, $delegate */
 /* eslint no-invalid-this: 0 */
-'use strict'
 
 /**
 * View that abstracts away the browser's DOM completely.
