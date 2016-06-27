@@ -1,5 +1,3 @@
-'use strict'
-
 /**
 * Takes a model and view and acts as the controller between them
 *

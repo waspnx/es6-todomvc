@@ -1,5 +1,4 @@
 /* global app, $on, log */
-'use strict'
 
 require('todomvc-common')
 require('./view')
