@@ -1,6 +1,6 @@
 /* eslint no-console:0 */
 import {onLoad} from './app'
-import './helpers'
+import {$on} from './helpers'
 
 // this is only relevant when using `hot` mode with webpack
 // special thanks to Eric Clemmons: https://github.com/ericclemmons/webpack-hot-server-example
@@ -22,6 +22,6 @@ if (module.hot) {
 }
 
 function bindToWindow() {
-  window.$on(window, 'load', onLoad)
-  window.$on(window, 'hashchange', onLoad)
+  $on(window, 'load', onLoad)
+  $on(window, 'hashchange', onLoad)
 }
