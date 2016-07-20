@@ -6,7 +6,7 @@ module.exports = env => {
   const {ifProd, ifNotProd} = getIfUtils(env)
   return webpackValidator({
     context: resolve('src'),
-    entry: './app.js',
+    entry: './bootstrap.js',
     output: {
       filename: 'bundle.js',
       path: resolve('dist'),

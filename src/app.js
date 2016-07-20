@@ -23,11 +23,8 @@ function Todo(name) {
   this.controller = new app.Controller(this.model, this.view)
 }
 
-function onLoad() {
+export function onLoad() { // eslint-disable-line import/prefer-default-export
   var todo = new Todo('todos-vanillajs')
   todo.controller.setView(document.location.hash)
   log('view set')
 }
-
-$on(window, 'load', onLoad)
-$on(window, 'hashchange', onLoad)
